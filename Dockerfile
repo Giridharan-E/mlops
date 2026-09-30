@@ -9,7 +9,7 @@ FROM python:3.11-slim
 WORKDIR /app
 RUN apt-get update && apt-get install -y curl
 
-COPY --from=builder /install /usr/local
+COPY --from=builder/install/usr/local
 COPY main.py .
 
 EXPOSE 8000
